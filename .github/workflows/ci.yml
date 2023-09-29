@@ -45,4 +45,3 @@ jobs:
           workdir: '.'
           coverage: false
           python_version: ${{ matrix.python_version }}
-
