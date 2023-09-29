@@ -4,6 +4,7 @@ description = "An automated Slack bot to syndicate local events into Slack chann
 readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "MIT" }
+version="0.1.0"
 authors = [
   { name = "Olivia Sculley", email = "olivia@sculley.dev" },
 ]
