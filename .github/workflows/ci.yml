@@ -1,7 +1,6 @@
 name: Run CI
 
-on:
-  pull_request:
+on: [push]
 
 jobs:
   lint_and_test:
