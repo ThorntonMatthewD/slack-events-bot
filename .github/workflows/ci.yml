@@ -8,6 +8,10 @@ jobs:
       matrix:
         python_version: ['3.11.5']
 
+    env:
+      SLACK_BOT_TOKEN: "fake"
+      SIGNING_SECRET: "also_fake"
+
     runs-on: ubuntu-latest
     steps:
       - name: Checkout project
