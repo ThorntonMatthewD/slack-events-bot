@@ -1,8 +1,15 @@
+import os
 import pytest
 from fastapi.testclient import TestClient
 from threading import Thread
 
 from bot import API
+
+
+@pytest.fixture(autouse=True)
+def set_fake_env_vars(monkeypatch):
+    """Sets fake environmental variables for Slack"""
+    monkeypatch.setattr(os.environ, "get", lambda key: "Fake value")
 
 
 @pytest.fixture
