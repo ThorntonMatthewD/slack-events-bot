@@ -32,7 +32,6 @@ jobs:
         uses: microsoft/action-python@0.7.0
         with:
           pylint: true
-          python_version: ${{ matrix.python_version }}
 
       - name: Pytest
         uses: microsoft/action-python@0.7.0
