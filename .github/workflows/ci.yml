@@ -30,4 +30,13 @@ jobs:
         run: python -m pylint src/
 
       - name: Pytest
-        run: python -m pytest tests/
+        run: python -m pytest --junit-xml=test-results.xml tests/
+
+      - name: Report failures
+        if: always()
+        uses: pmeier/pytest-results-action@main
+        with:
+          path: test-results.xml
+          summary: true
+          display-options: fEX
+          fail-on-empty: true

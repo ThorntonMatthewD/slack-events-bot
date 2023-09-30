@@ -23,3 +23,7 @@ def test_health_check_with_a_dead_thread(test_client, threads_appear_dead):
     assert response.json() == {
         "detail": f"The {first_thread.name} thread has died. This container will soon restart."
     }
+
+def test_intentional_failure():
+    """You already know the answer."""
+    assert "Pumpkin Pie" == "Not tasty"
